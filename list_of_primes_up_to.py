@@ -1,9 +1,9 @@
-# project-5a
+# project-7a
 
 # Author: Gabriel Venegas
 # GitHub username: GVenegas1
 # Date: 11/12/2025
-#Description: This program returns all of the prime numbers. Prime numbers are
+#Description: This program returns all prime numbers. Prime numbers are
             #is a number greater than 1 that can be divided evenly by 1 and itself.
             #For example 2,3,5,7
 
