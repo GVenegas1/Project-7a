@@ -21,26 +21,12 @@ def list_of_primes_up_to(limit=100):
     prime[1] = False
 
     #Step-2
-    #Eliminate all even numbers greater than 2(they cant be prime)
-    #stating at 4 and go up to limit, skipping by 2
-    for number in range(4, limit+1, 2):
-        prime[number] = False
+    for devisor in range(2,int(limit**0.5)+1):
+        if prime[devisor]:
+            for multiple in range(devisor*devisor, limit + 1, devisor):
+                prime[multiple] = False
 
     #Step-3
-    #Loop to find the next prime number by checking numbers up to the sq-root
-    divisor = 3
-    while divisor <= limit ** 0.5:
-
-        #if the number is still marked as true, its prime
-        if prime[divisor]:
-            #start from divisor * divisor
-
-            for multiple in range(divisor, limit + 1, divisor):
-                prime[multiple] = False
-        #Move on to next odd number
-        divisor += 2
-
-    #Step-4
     #Build a list of numbers that are still marked True(prime)
     prime_numbers = []
     for i in range(len(prime)):
