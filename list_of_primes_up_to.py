@@ -21,7 +21,10 @@ def list_of_primes_up_to(limit=100):
     prime[1] = False
 
     #Step-2
+    #Sieve process, go thru all the numbers starting from 2 up to the square root of the limit
     for devisor in range(2,int(limit**0.5)+1):
+        #if the number is still marked as prime
+        #mark all multiples of this number as not prime
         if prime[devisor]:
             for multiple in range(devisor*devisor, limit + 1, devisor):
                 prime[multiple] = False
